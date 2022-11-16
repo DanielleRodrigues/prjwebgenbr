@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  background: #383A59;
+  margin: 0;
+  font-family: 'Poppins';
+  color: #fff;
+  height: 100vh;
+  line-height: 1.6;
+  /* overflow: hidden; */
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  /*Propriedades do Scroll */
+  /* overflow-y: scroll; 
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory; */
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  width: 100%;
+  height: 60px;
+  background: #2F2E41;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  width: 100%;
+  justify-content: center;
+}
+
+.navbar ul li {
+  margin: 0 1rem;
+  padding: 1rem;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #f4f4f4;
+}
+
+.navbar ul li a:hover {
+  color: #FF79C6;
+}
+
+.header {
+  padding: 140px 0 80px;
+  margin: 0 auto;
+  justify-content: center;
+  text-align: center;
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+img {
+  margin: auto;
+  display: block;
+}
+
+.floating {
+  animation-name: floating;
+  animation-duration: 2.3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+
+  50% {
+    transform: translate(0, 15px);
+  }
+
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+
+button {
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 50px;
+  border: 3px solid #2F2E41;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  outline: 0;
+  box-sizing: border-box;
+  background: #8CA0FA;
+  cursor: pointer;
+}
+
+
+/* Login */
+.titulo{
+  margin-top: 5%;
+  text-align: center;
+}
+
+form {
+  max-width: 360px;
+  margin: 50px auto;
+  /* margin: auto; */
+  display: block;
+}
+
+input {
+  color: white;
+  font-family: Helvetica Neue, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 50px;
+  background: transparent;
+  border: 3px solid #8CA0FA;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width: 100%;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  background: #8CA0FA;
+  cursor: pointer;
+}
+
+::placeholder {
+  color: #8CA0FA;
+}
+
+textarea {
+  color: white;
+  font-family: Helvetica Neue, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 50px;
+  background: transparent;
+  border: 3px solid #8CA0FA;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width: 100%;
+  outline: 0;
+  box-sizing: border-box;
+
+}
+
+
+/*faq */
+
+.faq-content {
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.faq-question {
+  padding: 20px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.panel {
+  display: none;
+}
+
+.panel-title {
+  font-size: 24px;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 10px 10px 0 48px;
+  display: block;
+  cursor: pointer;
+  color: #FF79C6;
+}
+
+.panel-content {
+  font-size: 20px;
+  padding: 0px 14px;
+  margin: 0 40px;
+  height: 0;
+  overflow: hidden;
+  z-index: -1;
+  position: relative;
+  opacity: 0;
+  -webkit-transition: 0.4s ease;
+  -moz-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+.panel:checked~.panel-content {
+  height: auto;
+  opacity: 1;
+  padding: 14px;
+}
+
+.plus {
+  position: absolute;
+  margin-left: 20px;
+  margin-top: 4px;
+  z-index: 5;
+  font-size: 42px;
+  line-height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  -webkit-transition: 0.2s ease;
+  -moz-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+  transition: 0.2s ease;
+  color: #8CA0FA;
+}
+
+.panel:checked~.plus {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+/*========= MEDIA QUERIES =========*/
+@media only screen and (max-width: 480px) {
+  img {
+    width: 100%;
+  }
+}
+
+/* @media screen and (max-width: 480px) {
+  .section{
+    max-width: min-content;
+  }
+} */
+@media screen and (max-width: 768px) {
+  .container {
+     padding-top: 15%;
+   }
+ }
+
+@media screen and (max-width: 1024px) {
+  .container{
+    padding-top: 10%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
