@@ -59,7 +59,7 @@ body {
 }
 
 .header {
-  padding: 140px 0 80px;
+  padding: 140px 0 0;
   margin: 0 auto;
   justify-content: center;
   text-align: center;
@@ -93,6 +93,13 @@ img {
   }
 }
 
+
+h1{
+  padding-top: 1%;
+}
+h2{
+  padding-bottom: 2%;
+}
 button {
   color: white;
   font-weight: 500;
