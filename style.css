@@ -7,6 +7,9 @@
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
+  text-decoration: none!important;
+  -webkit-box-shadow: none!important;
+  box-shadow: none!important;
 }
 
 
@@ -116,6 +119,7 @@ button {
   box-sizing: border-box;
   background: #8CA0FA;
   cursor: pointer;
+  text-decoration: none;
 }
 
 
