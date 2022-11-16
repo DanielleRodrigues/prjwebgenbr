@@ -123,6 +123,14 @@ button {
 }
 
 
+a:link {
+  color: white;
+}
+
+a:hover, :visited {
+  color:#FF79C6 ;
+}
+
 /* Login */
 .titulo{
   margin-top: 5%;
